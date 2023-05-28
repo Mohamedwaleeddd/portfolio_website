@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      :root {
+  --main-color: blueviolet;
+  --secondary-color: #2c4755;
+  --section-padding: 60px;
+  --section-background: #f6f6f6;
+  --main-duration: 0.5s;
+}
+* {
+  
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@keyframes kia{
+  from{
+    opacity:0;
+  }to{opacity:1;}
+}
+h1{
+  color: var(--main-color);
+  border-bottom: 1px;
+  font-size: 50px;
+  font-weight: bold;
+}
+html {
+  scroll-behavior: smooth;
+}
+        img{
+          animation: fadeIn 2s ease-in-out;
+          width: 250px;
+          border-radius: 30px;
+          border: 2.5px solid;
+          color: var(--main-color);
+          transition:1s;
+        }
+        .t{
+          height: 500px;
+        }
+        img:hover{
+          transform: scale(1.1);
+        }
+body {
+  color: #fff;
+  background: #112;
+  font-family: "Work Sans", sans-serif;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+.header {
+  padding: 20px;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .logo {
+  width: 80px;
+  border-radius: 50%;
+  height: 80px;
+  border: 1px black solid;
+}
+.header .links {
+  position: relative;
+}
+.header .links:hover .icon span:nth-child(2) {
+  width: 100%;
+}
+.header .links .icon {
+  width: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.header .links .icon span {
+  background-color: var(--main-color);
+  margin-bottom: 10px;
+  height: 3px;
+}
+.links{
+  text-decoration: underline;
+  color: var(--main-color);
+}
+.header .links .icon span:first-child {
+  width: 100%;
+}
+.header .links .icon span:nth-child(2) {
+  width: 60%;
+  transition: var(--main-duration);
+}
+.header .links .icon span:last-child {
+  width: 100%;
+}
+.header .links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #f6f6f6;
+  position: absolute;
+  right: 0;
+  min-width: 250px;
+  top: calc(100% + 15px);
+  display: none;
+  z-index: 1;
+  color: var(--main-color);
+}
+.header .links ul::before {
+  content: "";
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #f6f6f6 transparent;
+  position: absolute;
+  right: 5px;
+  top: -20px;
+}
+.header .links:hover ul {
+  display: block;
+  color: var(--main-color);
+}
+.header .links ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #333;
+  transition: var(--main-duration);
+}
+.header .links ul li a:hover {
+  padding-left: 25px;
+  color: var(--main-color);
+  text-decoration: underline;
+}
+.header .links ul li:not(:last-child) a {
+  border-bottom: 1px solid #ddd;
+}
+/* End Header */
+/* Start Landing Section */
+.landing {
+  background-image: url(4K-Neon-City-Wallpaper-HD.png);
+  background-size: cover;
+  height: calc(110vh - 64px);
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+.landing .intro-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  max-width: 100%;
+}
+.landing .intro-text h1 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 50px;
+  color: var(--main-color);
+}
+.landing .intro-text p {
+  font-size: 19px;
+  line-height: 1.8;
+}
+.footer {
+  background-color: #113;
+  color: white;
+  padding: 30px 10px;
+  text-align: center;
+  font-size: 18px;
+}
+.hl{
+   border: 5px solid;
+  color: orangered;
+  width: 250px;
+  height: 15px;
+  border-radius: 30px;
+  background: orangered;
+  margin-left: 20%;
+ }
+  .cs{
+      border: 5px solid;
+     color: orange;
+     width: 220px;
+     height: 15px;
+     border-radius: 30px;
+     margin-left: 20%;
+     background: orange;
+     }
+  .js{
+   border: 5px solid;
+   color: lime;
+   width: 200px;
+   height: 15px;
+   background: lime;
+   border-radius: 30px;
+   margin-left: 20%;
+  }
+  .skills{
+     margin-left: 50px 
+  }
+  .card{
+    border: 1px blueviolet solid;
+    border-radius: 7px;
+    color: white;
+    box-shadow: 5px 5px 5px #333;
+    transition: 1s;
+    width: 350px;
+    height: 80px;
+  }
+  .card h2{
+    margin-top: 20px;
+  }
+.card:hover{
+  transform: scale(1.1);
+}
+.landing img{
+  width: 45px;
+  opacity: 0.90;
+  transition: 1s;
+  display: flex;
+  border: none;
+ background: blueviolet;
+ border: 3px blueviolet solid;
+}
+.landing img:hover{
+  transform: scale(1.1);
+  opacity: 1;
+}
+.p{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 40px;
+}
+.p img{
+  margin-top: 19px;
+  margin-left: 40px;
+}
+  body{
+    height: 2000px;
+  }
+  #btn{
+    width: 50px;
+    height: 40px;
+    background: var(--main-color);
+    cursor: pointer;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 40px;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+  }
+
+.service:hover {
+	transform: scale(1.1);
+}
+.service img:hover{
+  opacity: 1;
+  transform:;
+}
+.service img {
+	width: 170px;
+	opacity: 0.50;
+	height: 170px;
+	border-radius: 5px;
+	border: none;
+	transform: none
+}
+.services{
+  display: flex;
+  margin-left:23%;
+  flex-wrap: wrap;
+}
+.service{
+  transition: 0.50s;
+	width: 220px;
+	height: 350px;
+	margin: 10px;
+	padding: 10px;
+	background-color: #113;
+	border-radius: 5px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+  .skills h3{
+    margin-left: 20%;
+    font-weight: 400;
+  }
+  .about{
+    display: flex;
+    align-items: center;
+  }
+  .about img{
+    width: 200px;
+    border-radius: 1000px;
+   transform: none;
+  }
+    </style>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&#038;display=swap"
+      rel="stylesheet"
+    />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <!-- Start Header -->
+   
+    <!-- End Header -->
+    <!-- Start Landing Section -->
+    <div class="landing" id="about">
+       <div class="header">
+      <div class="container">
+        <div style="display: flex;align-items: center;">
+        <img class="logo" src="Screenshot_20230506-155927_Gallery.jpg" alt="" />
+        <h3 style="font-weight: 500;margin-left: 3px"> MEMO</h3>
+      </div>
+        <div class="links">
+          <span class="icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <hr>
+      <div class="intro-text">
+        <h1>Hello There!!</h1>
+        <p>My Name Is Mohamed Waleed Im Web Developer.</p>
+      <center>
+      <a href="https://www.facebook.com/profile.php?id=100092758749703&mibextid=ZbWKwL"><img src="360_F_512566069_FHP6Z1TA3mU4miljMwqwywbcdAV1x8gK-removebg-preview.png" alt="icon"></a>
+      </center>
+      </div>
+    </div>
+    <br>
+    <br>
+    <center id="about">
+      <h1>About me</h1>
+    </center>
+    <div class="about">
+      <img src="Picsart_23-05-19_00-11-23-467.jpg" alt="">
+      <p>Hello my name is Mohamed Waleed im front-end developer i design websites. I'm from Egypt, Qalyubia.I learned Html, Css and javascript.</p>
+    </div>
+      <center id="services">
+        <h1 class="h1">Services</h1>
+        <br>
+      </center>
+      <center>
+        <div class="services">
+          <br>
+          <div class="service">
+            <img src="website-design-3-xxl.png" alt="">
+            <br>
+            <h2>Web Designer</h2>
+          </div>
+          <br>
+          <div class="service">
+            <img src="6fe523255cab538d5b5afaea3b3f695c-removebg-preview.png" alt="">
+            <br>
+            <h2>Web Developer</h2>
+          </div>
+          <br>
+        </div>
+      </center>
+    <br>
+    <br>
+    <center id="projects">
+      <h1>Projects</h1>
+        <br>
+        <br>
+        <div class="p" align="center">
+        <img src="Screenshot_20230503-025657_Spck Editor.jpg" alt="p1">
+        <br>
+        <br>
+        <br>
+        <img src="Screenshot_20230410-045554_Spck Editor.jpg" alt="p2" class="t">
+        <br>
+        <br>
+        <br>
+        <br>
+        <img src="Screenshot_20230418-055913_Spck Editor.jpg" alt="p3">
+        </div>
+      <div class="p" align="center">
+        <br>
+        <br>
+        <img src="Screenshot_20230507-055556_Spck Editor.jpg" alt="p4">
+        <br>
+        <br>
+        <br>
+        <br>
+        <img src="Screenshot_20230507-055854_Spck Editor.jpg" alt="p5">
+        <br>
+        <br>
+        <br>
+        <br>
+        <img src="Screenshot_20230501-022202_Spck Editor.jpg" alt="p6">
+      </div>
+        </div>      
+      </center>
+      <br>
+    <center id="skills">
+      <h1>Skills</h1>
+    </center>
+    <div class="skills">
+        <h3>html</h3><div class="hl"></div>
+        <br>
+        <h3>css</h3><div class="cs"></div>
+        <br>
+        <h3>javascript</h3><br><div class="js"></div>
+        </div>
+      <br>
+      <br>
+      <br>
+    <hr>
+    <br>
+    <br>
+    <center id="contact">
+  <h1>Contact Me</h1>
+  <div class="card"><h2>Walidsoliman17@gmail.com</h2></div>
+  </center>
+  <br>
+    <button id="btn">^</button>
+  <script>
+  let btn = document.getElementById("btn");
+  window.onscroll = function(){
+    if(scrollY >= 400){
+      btn.style.display = "block";
+    }else{
+      btn.style.display = "none";
+    }
+  }
+  btn.onclick = function(){
+    scroll({
+    left: 0,
+    top: 0,
+    behaviour:"smooth"
+    })
+  }
+  </script>
+  <footer class="footer">
+    <h3>Made With💜 By Mohamed Waleed</h>
+  </footer>
+  </body>
+</html>
